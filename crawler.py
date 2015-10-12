@@ -1,5 +1,4 @@
 __author__ = 'xhadix'
-__author__ = 'xhadix'
 import requests, urllib
 from bs4 import BeautifulSoup
 from urlparse import urlparse
