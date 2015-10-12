@@ -28,12 +28,12 @@ if r.status_code == 200:
             imageSize = imgSrc['src']
 
         try:
-            fileSize = urllib2.urlopen(imageSize)
+            fileSize = urllib2.urlopen(imageSize, timeout=2)
             totalSize += int(fileSize.headers.get("content-length"))
         except Exception as e:
             print('cannot open link '+str(e))
 
-    print(totalSize)
+    print "Total Size  = ", totalSize
 
 else:
     print('access blocked')
