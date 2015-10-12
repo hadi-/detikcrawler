@@ -4,8 +4,7 @@ from bs4 import BeautifulSoup
 from urlparse import urlparse
 from progressbar import ProgressBar
 
-print "usage insert URL with quotes \"google.com\" "
-url = input("insert url to crawl = ")
+url = raw_input("insert url to crawl = ")
 r = requests.get('http://' + url)
 pbar = ProgressBar()
 html = r.text
